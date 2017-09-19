@@ -10,4 +10,31 @@
 * Introduction
   This document contains the implementation of *experiment server* project  
 * Implementation
+** Steps to Ceate a VM on local machine
+   - Open terminal login to base4 with the below command:
+#+BEGIN_SRC bat : exports both :tangle "automation.sh"
+#!/bin/bash
+sudo apt-get install sshpass
+
+export SSHPASS="9705651490s"
+sshpass -e ssh -oBatchMode=no modepusravanthi@10.4.12.24
+#+END_SRC  
+   - Enter into the root from the container using the below command.
+#+BEGIN_SRC
+sudo su -
+
+#+END_SRC
+   - Create a container on base4 with below command:  
+#+BEGIN_SRC bat : exports both :tangle "automation.sh"  
+vzctl create 31 --ostemplate ubuntu-14.04-x86_64 --ipadd 10.4.12.31 --hostname experiment-server-labs 
+#+END_SRC
+  - Then start the container as:
+#+BEGIN_SRC
+vzctl start CTID
+#+END_SRC
+   - Enter into the container as :
+#+BEGIN_SRC
+vzctl enter CTID
+#+END_SRC
+   - Read the lab names from the file list-of-labs.org and clone the labs.
  

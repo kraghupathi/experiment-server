@@ -18,13 +18,13 @@
      4. Copy the generated build directory from all the labs to  /var/www/ 
 
 	
-| S.No | Tasks                  | Gitlab | Expected  effort  | Actual Effort | Estimated      | Actual start/ | Status | Assignee     |
-|      |                        |        | (in person hours) |               | start/end date | end date      |        |              |
-|------+------------------------+--------+-------------------+---------------+----------------+---------------+--------+--------------|
-|   1. | Create a file with the | [[https://gitlab.com/vlead-systems/experiment-server/issues/1][#1]]     |                   |               |                |               |        | Sravanthi. M |
-|      | list of 31 labs to be  |        |                   |               |                |               |        |              |
-|      | auto-deployable        |        |                   |               |                |               |        |              |
-|------+------------------------+--------+-------------------+---------------+----------------+---------------+--------+--------------|
-|      |                        |        |                   |               |                |               |        |              |
-|------+------------------------+--------+-------------------+---------------+----------------+---------------+--------+--------------|
-|      |                        |        |                   |               |                |               |        |              |
+| S.No | Tasks                            | Gitlab | Expected  effort  | Actual Effort | Estimated      | Actual start/ | Status      | Assignee     |
+|      |                                  |        | (in person hours) |               | start/end date | end date      |             |              |
+|------+----------------------------------+--------+-------------------+---------------+----------------+---------------+-------------+--------------|
+|   1. | Create a file with the           | [[https://gitlab.com/vlead-systems/experiment-server/issues/1][#1]]     | 1hr               | 1hr           | 19-09-2017/    | 19-09-2017    |             | Sravanthi. M |
+|      | list of 31 labs to be            |        |                   |               | 19-09-2017     | 19-09 -2017   | Completed   |              |
+|      | auto-deployable                  |        |                   |               |                |               |             |              |
+|------+----------------------------------+--------+-------------------+---------------+----------------+---------------+-------------+--------------|
+|    2 | Automation script to create a VM | [[https://gitlab.com/vlead-systems/experiment-server/issues/2][#2]]     |                   |               | 19-09-2017     |               | On progress | Sravanthi.M  |
+|------+----------------------------------+--------+-------------------+---------------+----------------+---------------+-------------+--------------|
+|      |                                  |        |                   |               |                |               |             |              |
