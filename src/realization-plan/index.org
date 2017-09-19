@@ -1,0 +1,27 @@
+#+Title: Plan for implementing the *experiment server* project  
+#+Author: Sytems Team
+#+SETUPFILE: ../org-templates/level-1.org
+#+TAGS: boilerplate(b)
+#+EXCLUDE_TAGS: boilerplate
+#+OPTIONS: ^:nil
+
+* Introduction 
+  This document contains the realization plan for implementing
+  the *experiment server* project.
+* Plan
+** Milestone
+   - Once this milestone is realized, the following are done to the
+     build vlabs on Open-edX:
+     1. Automate experiment serverr.
+     2. Clone all repos from openedx-vlead organization using an API.
+     3. Read each repository and run *make* file.
+     4. Copy the generated build directory from all the labs to  /var/www/ 
+
+	
+| S.No | Tasks                   | Gitlab | Expected  effort  | Actual Effort | Estimated      | Actual start/ | Status    | Assignee     |
+|      |                         |        | (in person hours) |               | start/end date | end date      |           |              |
+|------+-------------------------+--------+-------------------+---------------+----------------+---------------+-----------+--------------|
+|   1. | Clone all git           |        |                   |               |                |               |           |              |
+|      | repos using an API      |        |                   |               |                |               |           |              |
+|      |                         |        |                   |               |                |               |           |              |
+|------+-------------------------+--------+-------------------+---------------+----------------+---------------+-----------+--------------|

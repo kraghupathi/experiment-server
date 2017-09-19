@@ -1,0 +1,14 @@
+#+Title: Dump updated edx courses in production
+#+Author: Sytems Team
+#+SETUPFILE: ../org-templates/level-1.org
+#+TAGS: boilerplate(b)
+#+EXCLUDE_TAGS: boilerplate
+#+OPTIONS: ^:nil
+
+* Introduction
+  This document contains the steps to dump updated courses in
+  production
+* Steps to dump updated courses in production
+   
+     [[https://github.com/openedx-vlead/port-labs-to-openedx/blob/master/src/platform-install-configure/backup.org][Reference link]]
+

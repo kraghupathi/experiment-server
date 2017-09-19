@@ -1,0 +1,15 @@
+#+Title: Requirements for *build vlabs on OpenedX* project
+#+Author: Sytems Team
+#+SETUPFILE: ../org-templates/level-1.org
+#+TAGS: boilerplate(b)
+#+EXCLUDE_TAGS: boilerplate
+#+OPTIONS: ^:nil
+
+* Introduction
+  This document contains the requirements for *experiment server* project
+* Requirements
+  1. Clone 30 repositories from [[https://github.com/vlabs-on-openedx][vlabs-on-openedx]] organization
+  2. Run makefile from the each lab 
+  3. copy the generated build directory to /var/www/
+  
+
