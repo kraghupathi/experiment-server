@@ -48,6 +48,7 @@ import os.path
 from pprint import pprint
 from git import Repo
 import git
+# import simplejson as json
 
 exp_id = "../exp-ids"
 labs = "../exp-server-labs"
@@ -84,7 +85,8 @@ with open('labs.json') as json_file:
             os.system(bash_command)             
 
             os.chdir(exp_id)
-            pattern = os.path.join('../exp-ids', 'data[i][FIELD2]')        
+            for item in json_lines.reader(f):
+                pprint (item['x']) 
          
 #+END_SRC
 
