@@ -52,7 +52,6 @@ import git
 
 exp_id = "../exp_ids"
 labs = "../exp-server-labs"
-github_url = "labs.json(FIELD4[i])"
 
 # variable to store proxy value
 proxy = "http://proxy.iiit.ac.in:8080"
@@ -64,15 +63,22 @@ os.environ["HTTPS_PROXY"] = proxy
 os.makedirs('../exp-server-labs')
 os.makedirs('../exp_ids')
 
-with open('labs.json', 'w') as json_file:
+with open('labs.json') as json_file:
     data = json.load(json_file)
-    pprint(data)
-        
+    os.chdir(labs)
+    
     for i in range(2):
-        print('FIELD1[i]')
-        cmd1= "wget" + " " + "github_url"
-        pprint(cmd1)
-        os.system(cmd1)
- 
+        repo_id=(data[i]["FIELD4"].encode("utf-8"))
+        repo_url=(data[i]["FIELD2"].encode("utf-8"))
+#        pprint(data[i]["FIELD4"])
+        os.chdir(labs)
+
+     #   if not os.path.isdir(labs):
+            # Repo.clone_from(repo_url, repo_id, repo_url)
+        os.system("git clone %s" % data[i]["FIELD4"])
+        
+        os.chdir(labs[i])
+        os.system("cd src" )
+        os.system("make")
 
 #+END_SRC
