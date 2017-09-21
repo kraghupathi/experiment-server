@@ -25,7 +25,7 @@ sudo su -
 
    - Create a container on base4 with below command:  
 
-  - Then start the container as:
+   - Then start the container as:
 #+BEGIN_SRC
 vzctl start 31
 #+END_SRC
@@ -34,23 +34,22 @@ vzctl start 31
 vzctl enter 31
 #+END_SRC
    
-   - Read the lab names from the file list-of-labs.org and clone the labs.
- 
-#+BEGIN_EXAMPLE json : tangle labs.json
-
-
-#+END_EXAMPLE
+   - Read the lab names from the file labs.json and clone the labs.
 
 #+BEGIN_SRC python :tangle automation.py
 import json
 import sys
 import os
+import os.path
 from pprint import pprint
 from git import Repo
 import git
 
-exp_id = "../exp_ids"
+exp_id = "../exp-ids"
 labs = "../exp-server-labs"
+sh_script = "../implementation"
+apache = "/var/www/[i]"
+id = "data[i][FIELD2]"
 
 # variable to store proxy value
 proxy = "http://proxy.iiit.ac.in:8080"
@@ -60,7 +59,8 @@ os.environ["HTTP_PROXY"] = proxy
 os.environ["HTTPS_PROXY"] = proxy
 
 os.makedirs('../exp-server-labs')
-os.makedirs('../exp_ids')
+os.makedirs('../exp-ids')
+os.makedirs('../var/www/')
 
 with open('labs.json') as json_file:
     data = json.load(json_file)
@@ -70,19 +70,36 @@ with open('labs.json') as json_file:
         os.chdir(labs)
         if not os.path.isdir(labs):
             os.system("git clone %s" % data[i]["FIELD4"])
-        
- 
+            
+            cmd = "cp -rf" + " " + id* + " " + apache 
+            pprint (cmd)
+            os.system("cmd")
+             
+            os.chdir(sh_script)
+            bash_command="sh" + " " + "automation.sh"  
+            os.system(bash_command)             
+
+            os.chdir(exp_id)
+            pattern = os.path.join('../exp-ids', 'data[i][FIELD2]')        
+         
 #+END_SRC
 
+** Shell script to run makefile in the labs
 
 #+BEGIN_SRC bat : exports both :tangle "automation.sh"  
-# vzctl create 31 --ostemplate ubuntu-14.04-x86_64 --ipadd 10.4.12.31 --hostname experiment-server-labs 
 
-# cp -rf labs.json ../implementation
-# cd ../exp-server-labs[i]/src
-# make
+cd ../exp-server-labs
 
-# cd ..
-# sudo cp -rf build/* 
+for j in ../exp-server-labs/*;
+do 
 
+    echo "Opening $j"
+    cd $j;
+    cd src;
+    make;
+    cd ..
+    sudo cp -rf build/* /var/www/ 
+
+    cd ..
+    echo "Finished "
 #+END_SRC
