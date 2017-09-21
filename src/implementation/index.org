@@ -24,6 +24,9 @@ sudo su -
 #+END_SRC
 
    - Create a container on base4 with below command:  
+#+BEGIN_SRC
+vzctl create 31 --ostemplate ubuntu-14.04-x86_64 --ipadd 10.4.12.31 --hostname experiment-server-labs
+#+END_SRC
 
    - Then start the container as:
 #+BEGIN_SRC
@@ -34,6 +37,7 @@ vzctl start 31
 vzctl enter 31
 #+END_SRC
    
+** Automation script for the experiment server labs
    - Read the lab names from the file labs.json and clone the labs.
 
 #+BEGIN_SRC python :tangle automation.py
