@@ -1,12 +1,5 @@
 [
  {
-   "FIELD1": "S.No",
-   "FIELD2": "Lab_ID",
-   "FIELD3": "Lab_Url",
-   "FIELD4": "Github_Url",
-   "FIELD5": "Lab Name"
- },
- {
    "FIELD1": "1",
    "FIELD2": "fm-nitk",
    "FIELD3": "http://fm-nitk.vlabs.ac.in",

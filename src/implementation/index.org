@@ -24,9 +24,7 @@ sudo su -
 #+END_SRC
 
    - Create a container on base4 with below command:  
-#+BEGIN_SRC bat : exports both :tangle "automation.sh"  
-vzctl create 31 --ostemplate ubuntu-14.04-x86_64 --ipadd 10.4.12.31 --hostname experiment-server-labs 
-#+END_SRC
+
   - Then start the container as:
 #+BEGIN_SRC
 vzctl start 31
@@ -39,6 +37,7 @@ vzctl enter 31
    - Read the lab names from the file list-of-labs.org and clone the labs.
  
 #+BEGIN_EXAMPLE json : tangle labs.json
+
 
 #+END_EXAMPLE
 
@@ -68,17 +67,22 @@ with open('labs.json') as json_file:
     os.chdir(labs)
     
     for i in range(2):
-        repo_id=(data[i]["FIELD4"].encode("utf-8"))
-        repo_url=(data[i]["FIELD2"].encode("utf-8"))
-#        pprint(data[i]["FIELD4"])
         os.chdir(labs)
-
-     #   if not os.path.isdir(labs):
-            # Repo.clone_from(repo_url, repo_id, repo_url)
-        os.system("git clone %s" % data[i]["FIELD4"])
+        if not os.path.isdir(labs):
+            os.system("git clone %s" % data[i]["FIELD4"])
         
-        os.chdir(labs[i])
-        os.system("cd src" )
-        os.system("make")
+ 
+#+END_SRC
+
+
+#+BEGIN_SRC bat : exports both :tangle "automation.sh"  
+# vzctl create 31 --ostemplate ubuntu-14.04-x86_64 --ipadd 10.4.12.31 --hostname experiment-server-labs 
+
+# cp -rf labs.json ../implementation
+# cd ../exp-server-labs[i]/src
+# make
+
+# cd ..
+# sudo cp -rf build/* 
 
 #+END_SRC
