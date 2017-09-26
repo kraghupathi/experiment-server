@@ -67,48 +67,48 @@ os.makedirs('../var/www/')
 
 with open('labs.json') as json_file:
     data = json.load(json_file)
-    pprint (data[3]["FIELD2"])
+
     os.chdir(labs)
-    pprint (labs)
-    pprint (data[i])
-    
     for i in range(4):
-        os.system("git clone %s" % data[i]["FIELD4"])
+        if not os.path.isdir("labs[i]"):
+            os.system("git clone %s" % data[i]["FIELD4"])            
+            repo_name = data[i]["FIELD4"].split("/")[-1]
+            print repo_name
+            
+            cmd1 = "cd repo_name"
+            os.system(cmd1)
+            
+            cmd = "make -C "
+            os.system(cmd)
+            pprint (cmd)
 
-        os.chdir(sh_script)
-        bash_command="sh" + " " + "automation.sh"  
-        os.system(bash_command)  
-        
-        os.chdir(exp_id)
-        for j in range(4):       
-           #     data = open(labs.json, 'r')
-           #     data.read()
-           #     cmd = "cp -rf" + " " + "data[i]["FIELD2"]" + " " + "exp_id"
-           #     os.system(cmd)    
-            pprint ("data[j]["FIELD2"]")
-  
-                   
-
-
+            # os.chdir(sh_script)
+            # bash_command="sh" + " " + "automation.sh"  
+            # os.system(bash_command)
+         
+            os.chdir(exp_id)
+            for j in range(4):
+                repo_id = data[i]["FIELD2"]
+                if not os.path.isdir(exp_id):
+                    cmd = "cp -rf %s" % repo_id % exp_id       
+                    os.system(cmd)       
+                    pprint (data[j]["FIELD2"])
+       
 #+END_SRC
 
 ** Shell script to run makefile in the labs
 
 #+BEGIN_SRC bat : exports both :tangle "automation.sh"  
 
-labs = "../exp-server-labs/"
-cd labs
+# labs = "../exp-server-labs"
+repo = "data[i]"
 
-for k in labs;
+for k in ../exp-server-labs;
 do 
-
-    echo "Opening $k";
-    cd $k;
-    cd 
-    cd src &&
-    make &&
+    # cd ../exp-server-labs
+    make -C "$k" || exit 
     cd .. &&
-    sudo cp -rf build/* /var/www/ ;
+    make -C experiment-server/;cp -r ex/build 
 
     cd ..
     echo "Finished "
