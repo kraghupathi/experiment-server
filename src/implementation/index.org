@@ -48,12 +48,10 @@ import os.path
 from pprint import pprint
 from git import Repo
 import git
-# import simplejson as json
 
 exp_id = "../exp-ids"
 labs = "../exp-server-labs"
 sh_script = "../implementation"
-apache = "/var/www/[i]"
 id = "data[i][FIELD2]"
 
 # variable to store proxy value
@@ -69,43 +67,51 @@ os.makedirs('../var/www/')
 
 with open('labs.json') as json_file:
     data = json.load(json_file)
+    pprint (data[3]["FIELD2"])
     os.chdir(labs)
+    pprint (labs)
+    pprint (data[i])
     
-    for i in range(2):
-        os.chdir(labs)
-        if not os.path.isdir(labs):
-            os.system("git clone %s" % data[i]["FIELD4"])
-            
-            cmd = "cp -rf" + " " + id* + " " + apache 
-            pprint (cmd)
-            os.system("cmd")
-             
-            os.chdir(sh_script)
-            bash_command="sh" + " " + "automation.sh"  
-            os.system(bash_command)             
+    for i in range(4):
+        os.system("git clone %s" % data[i]["FIELD4"])
 
-            os.chdir(exp_id)
-            for item in json_lines.reader(f):
-                pprint (item['x']) 
-         
+        os.chdir(sh_script)
+        bash_command="sh" + " " + "automation.sh"  
+        os.system(bash_command)  
+        
+        os.chdir(exp_id)
+        for j in range(4):       
+           #     data = open(labs.json, 'r')
+           #     data.read()
+           #     cmd = "cp -rf" + " " + "data[i]["FIELD2"]" + " " + "exp_id"
+           #     os.system(cmd)    
+            pprint ("data[j]["FIELD2"]")
+  
+                   
+
+
 #+END_SRC
 
 ** Shell script to run makefile in the labs
 
 #+BEGIN_SRC bat : exports both :tangle "automation.sh"  
 
-cd ../exp-server-labs
+labs = "../exp-server-labs/"
+cd labs
 
-for j in ../exp-server-labs/*;
+for k in labs;
 do 
 
-    echo "Opening $j"
-    cd $j;
-    cd src;
-    make;
-    cd ..
-    sudo cp -rf build/* /var/www/ 
+    echo "Opening $k";
+    cd $k;
+    cd 
+    cd src &&
+    make &&
+    cd .. &&
+    sudo cp -rf build/* /var/www/ ;
 
     cd ..
     echo "Finished "
+done
+
 #+END_SRC
