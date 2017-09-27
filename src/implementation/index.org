@@ -65,6 +65,7 @@ os.makedirs('../exp-server-labs')
 os.makedirs('../exp-ids')
 os.makedirs('../var/www/')
 
+os.system("rsync -t" %s % labs.json "../../build/code/implementation")
 with open('labs.json') as json_file:
     data = json.load(json_file)
     os.chdir(labs)
@@ -81,17 +82,18 @@ with open('labs.json') as json_file:
                 # pprint (cmd)
                 #cmd = "cd .."
                 os.chdir("..")
+
             # os.chdir(sh_script)
             # bash_command="sh" + " " + "automation.sh"  
             # os.system(bash_command)
          
-            # os.chdir(exp_id)
-            # for j in range(4):
-            #     repo_id = data[i]["FIELD2"]
-            #     if not os.path.isdir(exp_id):
-            #         cmd = "cp -rf %s" % repo_id % exp_id       
-            #         os.system(cmd)       
-            #         pprint (data[j]["FIELD2"])
+                os.chdir(exp_id)
+                for j in range(4):
+                  repo_id = data[i]["FIELD2"]
+                  if not os.path.isdir(exp_id):
+                     cmd = "cp -rf %s" % repo_id % exp_id       
+                     os.system(cmd)       
+                     pprint (data[j]["FIELD2"])
        
 #+END_SRC
 
