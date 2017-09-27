@@ -65,7 +65,8 @@ os.makedirs('../exp-server-labs')
 os.makedirs('../exp-ids')
 os.makedirs('../var/www/')
 
-os.system("rsync -t" %s % labs.json "../../build/code/implementation")
+# os.system("rsync -t" %s % labs.json "../../build/code/implementation")
+
 with open('labs.json') as json_file:
     data = json.load(json_file)
     os.chdir(labs)
