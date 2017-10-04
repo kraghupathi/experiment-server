@@ -77,14 +77,14 @@ os.makedirs('../var/www/')
 with open('labs.json') as json_file:
     data = json.load(json_file)
 
-    os.chdir(exp_id)
+    
     for i in range(4):
+        os.chdir(exp_id)
         if not os.path.isdir("exp_id[i]"):
             repo_id = data[i]["FIELD2"]
             pprint (repo_id)
-            # cmd = "cp -rf %s" % repo_id % exp_id       
-            # os.system(cmd)       
-            os.system
+            cmd = "cp -rf %s" % repo_id /var/www/       
+            os.system(cmd)       
 
     os.chdir(labs)
     for i in range(4):
