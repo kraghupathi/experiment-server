@@ -84,7 +84,7 @@ with open('labs.json') as json_file:
             pprint (repo_id)
             # cmd = "cp -rf %s" % repo_id % exp_id       
             # os.system(cmd)       
-            
+            os.system
 
     os.chdir(labs)
     for i in range(4):
@@ -97,6 +97,8 @@ with open('labs.json') as json_file:
             if not os.path.isdir(repo_name):          
                 cmd1 = "make -C src/"
                 os.system(cmd1)
+                cmd2 = "sudo cp -rf build /var/www/"
+                os.system(cmd2)
                 # pprint (cmd)
                 #cmd = "cd .."
                 os.chdir("..")
