@@ -40,6 +40,13 @@ vzctl enter 31
 ** Automation script for the experiment server labs
    - Read the lab names from the file labs.json and clone the labs.
 
+#+BEGIN_SRC bat : exports both :tangle "automation.sh"  
+
+cp -rf ../../../src/implementation/labs.json ../../build/code/implemetation/
+
+
+#+END_SRC
+
 #+BEGIN_SRC python :tangle automation.py
 import json
 import sys
@@ -69,6 +76,16 @@ os.makedirs('../var/www/')
 
 with open('labs.json') as json_file:
     data = json.load(json_file)
+
+    os.chdir(exp_id)
+    for i in range(4):
+        if not os.path.isdir("exp_id[i]"):
+            repo_id = data[i]["FIELD2"]
+            pprint (repo_id)
+            # cmd = "cp -rf %s" % repo_id % exp_id       
+            # os.system(cmd)       
+            
+
     os.chdir(labs)
     for i in range(4):
         if not os.path.isdir("labs[i]"):
@@ -83,41 +100,8 @@ with open('labs.json') as json_file:
                 # pprint (cmd)
                 #cmd = "cd .."
                 os.chdir("..")
-
-            # os.chdir(sh_script)
-            # bash_command="sh" + " " + "automation.sh"  
-            # os.system(bash_command)
          
-                os.chdir(exp_id)
-                for j in range(4):
-                  repo_id = data[i]["FIELD2"]
-                  if not os.path.isdir(exp_id):
-                     cmd = "cp -rf %s" % repo_id % exp_id       
-                     os.system(cmd)       
-                     pprint (data[j]["FIELD2"])
-       
+               
 #+END_SRC
 
-** Shell script to run makefile in the labs
 
-#+BEGIN_SRC bat : exports both :tangle "automation.sh"  
-
-# labs = "../exp-server-labs"
-repo = "data[i]"
-
-for k in ../exp-server-labs;
-do 
-    # cd ../exp-server-labs
-    make -C "$k" || exit 
-    cd .. &&
-    make -C experiment-server/;cp -r ex/build 
-
-    cd ..
-    echo "Finished "
-done
-
-#+END_SRC
-#+BEGIN_SRC :tangle make
-all:
-    @$(MAKE) -C subfolder
-#+END_SRC
