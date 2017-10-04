@@ -40,13 +40,6 @@ vzctl enter 31
 ** Automation script for the experiment server labs
    - Read the lab names from the file labs.json and clone the labs.
 
-#+BEGIN_SRC bat : exports both :tangle "automation.sh"  
-
-cp -rf ../../../src/implementation/labs.json ../../build/code/implemetation/
-
-
-#+END_SRC
-
 #+BEGIN_SRC python :tangle automation.py
 import json
 import sys
@@ -78,16 +71,16 @@ with open('labs.json') as json_file:
     data = json.load(json_file)
 
     
-    for i in range(4):
+    for i in range(1):
         os.chdir(exp_id)
         if not os.path.isdir("exp_id[i]"):
             repo_id = data[i]["FIELD2"]
             pprint (repo_id)
-            cmd = "cp -rf %s" % repo_id /var/www/       
-            os.system(cmd)       
+            # cmd = "cp -rf %s" % repo_id /var/www/       
+            # os.system(cmd)       
 
     os.chdir(labs)
-    for i in range(4):
+    for i in range(1):
         if not os.path.isdir("labs[i]"):
             os.system("git clone %s" % data[i]["FIELD4"])            
             repo_name = data[i]["FIELD4"].split("/")[-1]
@@ -97,11 +90,13 @@ with open('labs.json') as json_file:
             if not os.path.isdir(repo_name):          
                 cmd1 = "make -C src/"
                 os.system(cmd1)
-                cmd2 = "sudo cp -rf build /var/www/"
-                os.system(cmd2)
+                lab_id= data[i]["FIELD2"]
+                cmd2 = 'sudo rsync -rav build/*" + "/var/www/" + lab_id + "/"'
+                pprint cmd2
+                #os.system(cmd2)
                 # pprint (cmd)
                 #cmd = "cd .."
-                os.chdir("..")
+               # os.chdir("..")
          
                
 #+END_SRC
