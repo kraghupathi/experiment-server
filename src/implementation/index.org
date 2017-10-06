@@ -37,6 +37,7 @@ vzctl start 31
 vzctl enter 31
 #+END_SRC
    
+** Json file with list of experiment server labs 
 ** Automation script for the experiment server labs
    - Read the lab names from the file labs.json and clone the labs.
 
@@ -51,8 +52,6 @@ import git
 
 exp_id = "../exp-ids"
 labs = "../exp-server-labs"
-sh_script = "../implementation"
-id = "data[i][FIELD2]"
 
 # variable to store proxy value
 proxy = "http://proxy.iiit.ac.in:8080"
@@ -63,40 +62,36 @@ os.environ["HTTPS_PROXY"] = proxy
 
 os.makedirs('../exp-server-labs')
 os.makedirs('../exp-ids')
-os.makedirs('../var/www/')
 
-# os.system("rsync -t" %s % labs.json "../../build/code/implementation")
-
-with open('labs.json') as json_file:
-    data = json.load(json_file)
-
+with open('labs.json') as data_file:
+    data = json.load(data_file)
     
-    for i in range(1):
+    for i in range(5):
         os.chdir(exp_id)
         if not os.path.isdir("exp_id[i]"):
-            repo_id = data[i]["FIELD2"]
+            repo_id = (data[i]["Lab_ID"].encode("utf-8"))
             pprint (repo_id)
             # cmd = "cp -rf %s" % repo_id /var/www/       
             # os.system(cmd)       
 
     os.chdir(labs)
-    for i in range(1):
+    for i in range(5):
         if not os.path.isdir("labs[i]"):
-            os.system("git clone %s" % data[i]["FIELD4"])            
-            repo_name = data[i]["FIELD4"].split("/")[-1]
+            os.system("git clone %s" % data[i]["Github_Url"])            
+            repo_name = (data[i]["Github_Url"].split("/")[-1].encode("utf-8"))
             pprint (repo_name)
             
             os.chdir(repo_name)                 
             if not os.path.isdir(repo_name):          
                 cmd1 = "make -C src/"
                 os.system(cmd1)
-                lab_id= data[i]["FIELD2"]
-                cmd2 = 'sudo rsync -rav build/*" + "/var/www/" + lab_id + "/"'
-                pprint cmd2
-                #os.system(cmd2)
+                lab_id= data[i]["Lab_ID"]
+                cmd2 = "sudo rsync -rav build/*" + "/var/www/" + lab_id + "/""
+                pprint (cmd2)
+                os.system(cmd2)
                 # pprint (cmd)
                 #cmd = "cd .."
-               # os.chdir("..")
+                os.chdir("..")
          
                
 #+END_SRC
