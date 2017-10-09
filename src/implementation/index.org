@@ -87,7 +87,7 @@ with open('labs.json') as data_file:
                 os.system(cmd1)
                 lab_id= data[i]["Lab_ID"]
                 cmd2 = "sudo rsync -rav build/* " + "/var/www/" + lab_id + "/"
-                pprint (cmd2)
+                #pprint (cmd2)
                 os.system(cmd2)
                 # pprint (cmd)
                 #cmd = "cd .."
