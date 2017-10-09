@@ -37,7 +37,7 @@ vzctl start 31
 vzctl enter 31
 #+END_SRC
    
-** Json file with list of experiment server labs 
+# ** Json file with list of experiment server labs 
 ** Automation script for the experiment server labs
    - Read the lab names from the file labs.json and clone the labs.
 
@@ -69,7 +69,7 @@ with open('labs.json') as data_file:
     for i in range(5):
         os.chdir(exp_id)
         if not os.path.isdir("exp_id[i]"):
-            repo_id = (data[i]["Lab_ID"].encode("utf-8"))
+            repo_id = data[i]["Lab_ID"]
             pprint (repo_id)
             # cmd = "cp -rf %s" % repo_id /var/www/       
             # os.system(cmd)       
@@ -78,7 +78,7 @@ with open('labs.json') as data_file:
     for i in range(5):
         if not os.path.isdir("labs[i]"):
             os.system("git clone %s" % data[i]["Github_Url"])            
-            repo_name = (data[i]["Github_Url"].split("/")[-1].encode("utf-8"))
+            repo_name = data[i]["Github_Url"].split("/")[-1]
             pprint (repo_name)
             
             os.chdir(repo_name)                 
@@ -86,7 +86,7 @@ with open('labs.json') as data_file:
                 cmd1 = "make -C src/"
                 os.system(cmd1)
                 lab_id= data[i]["Lab_ID"]
-                cmd2 = "sudo rsync -rav build/*" + "/var/www/" + lab_id + "/""
+                cmd2 = "sudo rsync -rav build/* " + "/var/www/" + lab_id + "/"
                 pprint (cmd2)
                 os.system(cmd2)
                 # pprint (cmd)
