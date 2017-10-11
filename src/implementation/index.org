@@ -37,198 +37,199 @@ vzctl start 31
 vzctl enter 31
 #+END_SRC
    
-# ** Json file with list of experiment server labs
+** Json file with list of experiment server labs
 
-# 
-# [
-#   {
-#     "Lab_ID": "fm-nitk",
-#     "Lab_Url": "http://fm-nitk.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/fluid-mechanics-nitk",
-#     "Lab Name": "Fluid Mechanics"
-#   },
-#   {
-#     "Lab_ID": "fmc-nitk",
-#     "Lab_Url": "http://fmc-nitk.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/fluid-machinery-lab-nitk",
-#     "Lab Name": "Fluid Machinery Lab"
-#   },
-#   {
-#     "Lab_ID": "mfts-iitg",
-#     "Lab_Url": "https://mfts-iitg.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/virtual-laboratory-experience-in-fluid-and-thermal-sciences-iitg",
-#     "Lab Name": "Virtual laboratory Experience in Fluid and Thermal Sciences"
-#   },
-#   {
-#     "Lab_ID": "mv-iitg",
-#     "Lab_Url": "https://mv-iitg.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/virtual-lab-for-mechanical-vibrations-iitg",
-#     "Lab Name": "Virtual Lab for Mechanical Vibrations"
-#   },
-#   {
-#     "Lab_ID": "vmt-iitg",
-#     "Lab_Url": "https://vmt-iitg.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/virtual-mass-transfer-lab-iitg",
-#     "Lab Name": "Virtual Mass Transfer"
-#   },
-#   {
-#     "Lab_ID": "ve-iitg",
-#     "Lab_Url": "https://ve-iitg.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/virtual-english-iitg",
-#     "Lab Name": "Virtual English and Communication Lab"
-#   },
-#   {
-#     "Lab_ID": "ergonomics-iitg",
-#     "Lab_Url": "https://ergonomics-iitg.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/ergonomics-iitg",
-#     "Lab Name": "Ergonomics Lab for Assessing Physical Aspects of Design"
-#   },
-#   {
-#     "Lab_ID": "vlsi-iitg",
-#     "Lab_Url": "https://vlsi-iitg.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/digital-vlsi-design-iitg",
-#     "Lab Name": "Digital VLSI Design Virtual lab"
-#   },
-#   {
-#     "Lab_ID": "ssl-iitg",
-#     "Lab_Url": "https://ssl-iitg.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/signals-and-systems-laboratory-iitg",
-#     "Lab Name": "Signals and Systems Laboratory"
-#   },
-#   {
-#     "Lab_ID": "vem-iitg",
-#     "Lab_Url": "https://vem-iitg.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/electrical-machines-iitg",
-#     "Lab Name": "Electrical Machines Laboratory"
-#   },
-#   {
-#     "Lab_ID": "anthropology-iitg",
-#     "Lab_Url": "https://anthropology-iitg.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/anthropology-iitg",
-#     "Lab Name": "Virtual Anthropology Lab"
-#   },
-#   {
-#     "Lab_ID": "he-coep",
-#     "Lab_Url": "https://he-coep.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/hybrid-electronics-lab-coep",
-#     "Lab Name": "Hybrid Electronics Lab"
-#   },
-#   {
-#     "Lab_ID": "sl-coep",
-#     "Lab_Url": "https://sl-coep.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/sensor-laboratory-coep",
-#     "Lab Name": "Sensor Lab"
-#   },
-#   {
-#     "Lab_ID": "va-coep",
-#     "Lab_Url": "https://va-coep.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/vibration-and-acoustics-coep",
-#     "Lab Name": "Vibration and Acoustics"
-#   },
-#   {
-#     "Lab_ID": "plc-coep",
-#     "Lab_Url": "https://plc-coep.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/programmable-logic-controller-coep",
-#     "Lab Name": "Programmable Logic Controller Lab"
-#   },
-#   {
-#     "Lab_ID": "em-coep",
-#     "Lab_Url": "https://em-coep.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/electrical-machines-coep",
-#     "Lab Name": "Electrical Machines Lab"
-#   },
-#   {
-#     "Lab_ID": "mm-coep",
-#     "Lab_Url": "https://mm-coep.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/micro-machining-laboratory-coep",
-#     "Lab Name": "Micromachining laboratory"
-#   },
-#   {
-#     "Lab_ID": "fab-coep",
-#     "Lab_Url": "https://fab-coep.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/fab-laboratory-coep",
-#     "Lab Name": "FAB laboratory!"
-#   },
-#   {
-#     "Lab_ID": "sm-nitk",
-#     "Lab_Url": "https://sm-nitk.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/strength-of-materials-nitk",
-#     "Lab Name": "Strength-of-Materials lab"
-#   },
-#   {
-#     "Lab_ID": "ied-nitk",
-#     "Lab_Url": "https://ied-nitk.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/industrial-electrical-drives-nitk",
-#     "Lab Name": "Industrial Electric Drives and Application of PLC"
-#   },
-#   {
-#     "Lab_ID": "mm-nitk",
-#     "Lab_Url": "https://mm-nitk.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/mechanics-of-machine-nitk",
-#     "Lab Name": "Mechanics of Machine lab"
-#   },
-#   {
-#     "Lab_ID": "mdmv-nitk",
-#     "Lab_Url": "https://mdmv-nitk.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/machine-dynamics-and-mechanical-vibrations-nitk",
-#     "Lab Name": "Machine Dynamics and Mechanical Vibrations Lab"
-#   },
-#   {
-#     "Lab_ID": "sa-nitk",
-#     "Lab_Url": "https://sa-nitk.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/substration-automation-nitk",
-#     "Lab Name": "Substation Automation lab"
-#   },
-#   {
-#     "Lab_ID": "mrmsmtbs-iitk",
-#     "Lab_Url": "https://mrmsmtbs-iitk.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/material-response-to-micro-structural-mechanical-thermal-and-biological-stimuli-iitk",
-#     "Lab Name": "Material Response to Microstructural,Mechanical, Thermal and Biological Stimuli"
-#   },
-#   {
-#     "Lab_ID": "uorepc-nitk",
-#     "Lab_Url": "https://uorepc-nitk.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/unit-operation-reaction-engineering-and¡Vprocess-control-nitk",
-#     "Lab Name": "Unit-Operation-Reaction-Engg.-Process-Control lab"
-#   },
-#   {
-#     "Lab_ID": "tel-iitb",
-#     "Lab_Url": "https://tel-iitb.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/traffic-engg-iitb",
-#     "Lab Name": "Traffic Engineering Laboratory"
-#   },
-#   {
-#     "Lab_ID": "mfs-iiith",
-#     "Lab_Url": "https://mfs-iiith.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith",
-#     "Lab Name": "Molecular Fluorescence Spectroscopy"
-#   },
-#   {
-#     "Lab_ID": "ml-iitb",
-#     "Lab_Url": "https://ml-iitb.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/maglev-iitb",
-#     "Lab Name": "Magnetic Levitation"
-#   },
-#   {
-#     "Lab_ID": "pe-iitb",
-#     "Lab_Url": "https://pe-iitb.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/protein-engg-iitb",
-#     "Lab Name": "Virtual Proteomics Laboratory"
-#   },
-#   {
-#     "Lab_ID": "cse01-iiith",
-#     "Lab_Url": "https://cse01-iiith.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/data-structures-iiith",
-#     "Lab Name": "Data Structures"
-#   },
-#   {
-#     "Lab_ID": "mas-iiith",
-#     "Lab_Url": "https://mas-iiith.vlabs.ac.in",
-#     "Github_Url": "https://github.com/Virtual-Labs/molecular-absorption-spectroscopy-responsive-lab",
-#     "Lab Name": "Molecular Absorption Spectroscopy Lab"
-#   }
-# ]
-# #+END_SRC 
+#+BEGIN_SRC json :tangle labs.json
+
+[
+  {
+    "Lab_ID": "fm-nitk",
+    "Lab_Url": "http://fm-nitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/fluid-mechanics-nitk",
+    "Lab Name": "Fluid Mechanics"
+  },
+  {
+    "Lab_ID": "fmc-nitk",
+    "Lab_Url": "http://fmc-nitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/fluid-machinery-lab-nitk",
+    "Lab Name": "Fluid Machinery Lab"
+  },
+  {
+    "Lab_ID": "mfts-iitg",
+    "Lab_Url": "https://mfts-iitg.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/virtual-laboratory-experience-in-fluid-and-thermal-sciences-iitg",
+    "Lab Name": "Virtual laboratory Experience in Fluid and Thermal Sciences"
+  },
+  {
+    "Lab_ID": "mv-iitg",
+    "Lab_Url": "https://mv-iitg.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/virtual-lab-for-mechanical-vibrations-iitg",
+    "Lab Name": "Virtual Lab for Mechanical Vibrations"
+  },
+  {
+    "Lab_ID": "vmt-iitg",
+    "Lab_Url": "https://vmt-iitg.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/virtual-mass-transfer-lab-iitg",
+    "Lab Name": "Virtual Mass Transfer"
+  },
+  {
+    "Lab_ID": "ve-iitg",
+    "Lab_Url": "https://ve-iitg.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/virtual-english-iitg",
+    "Lab Name": "Virtual English and Communication Lab"
+  },
+  {
+    "Lab_ID": "ergonomics-iitg",
+    "Lab_Url": "https://ergonomics-iitg.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/ergonomics-iitg",
+    "Lab Name": "Ergonomics Lab for Assessing Physical Aspects of Design"
+  },
+  {
+    "Lab_ID": "vlsi-iitg",
+    "Lab_Url": "https://vlsi-iitg.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/digital-vlsi-design-iitg",
+    "Lab Name": "Digital VLSI Design Virtual lab"
+  },
+  {
+    "Lab_ID": "ssl-iitg",
+    "Lab_Url": "https://ssl-iitg.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/signals-and-systems-laboratory-iitg",
+    "Lab Name": "Signals and Systems Laboratory"
+  },
+  {
+    "Lab_ID": "vem-iitg",
+    "Lab_Url": "https://vem-iitg.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/electrical-machines-iitg",
+    "Lab Name": "Electrical Machines Laboratory"
+  },
+  {
+    "Lab_ID": "anthropology-iitg",
+    "Lab_Url": "https://anthropology-iitg.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/anthropology-iitg",
+    "Lab Name": "Virtual Anthropology Lab"
+  },
+  {
+    "Lab_ID": "he-coep",
+    "Lab_Url": "https://he-coep.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/hybrid-electronics-lab-coep",
+    "Lab Name": "Hybrid Electronics Lab"
+  },
+  {
+    "Lab_ID": "sl-coep",
+    "Lab_Url": "https://sl-coep.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/sensor-laboratory-coep",
+    "Lab Name": "Sensor Lab"
+  },
+  {
+    "Lab_ID": "va-coep",
+    "Lab_Url": "https://va-coep.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/vibration-and-acoustics-coep",
+    "Lab Name": "Vibration and Acoustics"
+  },
+  {
+    "Lab_ID": "plc-coep",
+    "Lab_Url": "https://plc-coep.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/programmable-logic-controller-coep",
+    "Lab Name": "Programmable Logic Controller Lab"
+  },
+  {
+    "Lab_ID": "em-coep",
+    "Lab_Url": "https://em-coep.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/electrical-machines-coep",
+    "Lab Name": "Electrical Machines Lab"
+  },
+  {
+    "Lab_ID": "mm-coep",
+    "Lab_Url": "https://mm-coep.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/micro-machining-laboratory-coep",
+    "Lab Name": "Micromachining laboratory"
+  },
+  {
+    "Lab_ID": "fab-coep",
+    "Lab_Url": "https://fab-coep.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/fab-laboratory-coep",
+    "Lab Name": "FAB laboratory!"
+  },
+  {
+    "Lab_ID": "sm-nitk",
+    "Lab_Url": "https://sm-nitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/strength-of-materials-nitk",
+    "Lab Name": "Strength-of-Materials lab"
+  },
+  {
+    "Lab_ID": "ied-nitk",
+    "Lab_Url": "https://ied-nitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/industrial-electrical-drives-nitk",
+    "Lab Name": "Industrial Electric Drives and Application of PLC"
+  },
+  {
+    "Lab_ID": "mm-nitk",
+    "Lab_Url": "https://mm-nitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/mechanics-of-machine-nitk",
+    "Lab Name": "Mechanics of Machine lab"
+  },
+  {
+    "Lab_ID": "mdmv-nitk",
+    "Lab_Url": "https://mdmv-nitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/machine-dynamics-and-mechanical-vibrations-nitk",
+    "Lab Name": "Machine Dynamics and Mechanical Vibrations Lab"
+  },
+  {
+    "Lab_ID": "sa-nitk",
+    "Lab_Url": "https://sa-nitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/substration-automation-nitk",
+    "Lab Name": "Substation Automation lab"
+  },
+  {
+    "Lab_ID": "mrmsmtbs-iitk",
+    "Lab_Url": "https://mrmsmtbs-iitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/material-response-to-micro-structural-mechanical-thermal-and-biological-stimuli-iitk",
+    "Lab Name": "Material Response to Microstructural,Mechanical, Thermal and Biological Stimuli"
+  },
+  {
+    "Lab_ID": "uorepc-nitk",
+    "Lab_Url": "https://uorepc-nitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/unit-operation-reaction-engineering-and¡Vprocess-control-nitk",
+    "Lab Name": "Unit-Operation-Reaction-Engg.-Process-Control lab"
+  },
+  {
+    "Lab_ID": "tel-iitb",
+    "Lab_Url": "https://tel-iitb.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/traffic-engg-iitb",
+    "Lab Name": "Traffic Engineering Laboratory"
+  },
+  {
+    "Lab_ID": "mfs-iiith",
+    "Lab_Url": "https://mfs-iiith.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/molecular-florescence-spectroscopy-responsive-lab-iiith",
+    "Lab Name": "Molecular Fluorescence Spectroscopy"
+  },
+  {
+    "Lab_ID": "ml-iitb",
+    "Lab_Url": "https://ml-iitb.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/maglev-iitb",
+    "Lab Name": "Magnetic Levitation"
+  },
+  {
+    "Lab_ID": "pe-iitb",
+    "Lab_Url": "https://pe-iitb.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/protein-engg-iitb",
+    "Lab Name": "Virtual Proteomics Laboratory"
+  },
+  {
+    "Lab_ID": "cse01-iiith",
+    "Lab_Url": "https://cse01-iiith.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/data-structures-iiith",
+    "Lab Name": "Data Structures"
+  },
+  {
+    "Lab_ID": "mas-iiith",
+    "Lab_Url": "https://mas-iiith.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/molecular-absorption-spectroscopy-responsive-lab",
+    "Lab Name": "Molecular Absorption Spectroscopy Lab"
+  }
+]
+#+END_SRC 
 
 ** Automation script for the experiment server labs
    - Read the lab names from the file labs.json and clone the labs.

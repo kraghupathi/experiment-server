@@ -16,7 +16,7 @@ init:
 
 build: init
 	make -f tangle-make -k all
-	rsync -rav src/implementation/labs.json build/code/implementation
+#	rsync -rav src/implementation/labs.json build/code/implementation
 
 clean:	
 	make -f tangle-make clean
