@@ -138,18 +138,6 @@
     "Lab Name": "Substation Automation lab"
   },
   {
-    "Lab_ID": "mrmsmtbs-iitk",
-    "Lab_Url": "https://mrmsmtbs-iitk.vlabs.ac.in",
-    "Github_Url": "https://github.com/Virtual-Labs/material-response-to-micro-structural-mechanical-thermal-and-biological-stimuli-iitk",
-    "Lab Name": "Material Response to Microstructural,Mechanical, Thermal and Biological Stimuli"
-  },
-  {
-    "Lab_ID": "uorepc-nitk",
-    "Lab_Url": "https://uorepc-nitk.vlabs.ac.in",
-    "Github_Url": "https://github.com/Virtual-Labs/unit-operation-reaction-engineering-and–process-control-nitk",
-    "Lab Name": "Unit-Operation-Reaction-Engg.-Process-Control lab"
-  },
-  {
     "Lab_ID": "tel-iitb",
     "Lab_Url": "https://tel-iitb.vlabs.ac.in",
     "Github_Url": "https://github.com/Virtual-Labs/traffic-engg-iitb",
@@ -184,5 +172,17 @@
     "Lab_Url": "https://mas-iiith.vlabs.ac.in",
     "Github_Url": "https://github.com/Virtual-Labs/molecular-absorption-spectroscopy-responsive-lab",
     "Lab Name": "Molecular Absorption Spectroscopy Lab"
+  }, 
+  {
+    "Lab_ID": "mrmsmtbs-iitk",
+    "Lab_Url": "https://mrmsmtbs-iitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/material-response-to-micro-structural-mechanical-thermal-and-biological-stimuli-iitk",
+    "Lab Name": "Material Response to Microstructural,Mechanical, Thermal and Biological Stimuli"
+  },
+  {
+    "Lab_ID": "uorepc-nitk",
+    "Lab_Url": "https://uorepc-nitk.vlabs.ac.in",
+    "Github_Url": "https://github.com/Virtual-Labs/unit-operation-reaction-engineering-and--process-control-nitk",
+    "Lab Name": "Unit-Operation-Reaction-Engg.-Process-Control lab"
   }
 ]
