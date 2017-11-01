@@ -12,7 +12,7 @@
   
 | S.No | Mi.no | Req Map | Milestone                  | Plan | Status | Est Hrs | Act Hrs | Issues |
 |------+-------+---------+----------------------------+------+--------+---------+---------+--------|
-|    1 |     1 |         | Automate-experiment-server |      | Closed | 240hrs  | 192hrs  | [[https://gitlab.com/vlead-systems/experiment-server/issues?scope=all&utf8=%E2%9C%93&state=closed][ref]]    |
+|    1 |     1 |         | Automate-experiment-server |      | Closed |         |         | [[https://gitlab.com/vlead-systems/experiment-server/issues?scope=all&utf8=%E2%9C%93&state=closed][ref]]    |
 |------+-------+---------+----------------------------+------+--------+---------+---------+--------|
 |      |       |         |                            |      |        |         |         |        |
 |------+-------+---------+----------------------------+------+--------+---------+---------+--------|
@@ -37,7 +37,7 @@
 |      | auto-deployable                                                   |        |                   |               |                |               |           |              |
 |------+-------------------------------------------------------------------+--------+-------------------+---------------+----------------+---------------+-----------+--------------|
 |    2 | Automation script  for the labs                                   | [[https://gitlab.com/vlead-systems/experiment-server/issues/2][#2]]     |                   |               |     19-09-2017 |    13-10-2017 | Completed | Sravanthi.M  |
-|      | running from experiment server                                    |        | 240hrs            | 192hrs        |                |               |           |              |
+|      | running from experiment server                                    |        |                   |               |                |               |           |              |
 |------+-------------------------------------------------------------------+--------+-------------------+---------------+----------------+---------------+-----------+--------------|
 |    3 | Script to parse json in python                                    | [[https://gitlab.com/vlead-systems/experiment-server/issues/3][#3]]     |                   |               |     20-09-2017 |    22-09-2017 | Completed | Sravanthi.M  |
 |------+-------------------------------------------------------------------+--------+-------------------+---------------+----------------+---------------+-----------+--------------|
