@@ -8,13 +8,25 @@
 # -*- mode: shell-script -*-
 
 * Introduction
-  This document contains the implementation of *experiment server* project  
+  - This document contains the implementation of *experiment server*
+    project. 
+* Experiment Server Labs
+  - The experiments which are running from a single server and
+    executed at the client end. Hence this list contains experiments
+    written in Javascript, Flash, HTML, CSS. All labs at level 5/6 are
+    to be scanned to identify the desired list.
+  - [[http://issues.vlabs.ac.in/issues/1084][Here]] is the detailed information regarding the project.
+  - Identified 31 labs which are running from experiment server. 
+  - Compared all these 31 labs with the labs hosted on production.
+  - Identified and fixed the two labs(Modern Digital Design Lab and
+    Single Board Heater System Virtual Lab) which are not ported
+    properly.
+ 
 * Implementation
 ** Automation script for the experiment server labs
    - Read the lab names from the file labs.json and clone the labs.
    - Initially the below python code imports the required modules to run the script.
 #+BEGIN_SRC python :tangle automation.py
-import csv
 import json
 import sys
 import os
