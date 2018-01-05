@@ -57,6 +57,7 @@ os.environ["HTTPS_PROXY"] = proxy
       - exp-server-labs : to store all the repositories 
 #+BEGIN_SRC python :tangle automation.py
 os.makedirs('../exp-server-labs')
+os.makedirs('../exp-ids')
 #+END_SRC
 
    - Open and read the json file to get exp-ids and repositories
