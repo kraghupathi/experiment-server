@@ -69,7 +69,7 @@ with open('labs.json') as data_file:
 
    - Prints exp-ids    
 #+BEGIN_SRC python :tangle automation.py
-    for i in range(31):
+    for i in range(1):
         os.chdir(exp_id)
         if not os.path.isdir("exp_id[i]"):
             repo_id = data[i]["Lab_ID"]
@@ -80,7 +80,7 @@ with open('labs.json') as data_file:
    - Clones all the repositories in the "experiment-sever-labs" directory
 #+BEGIN_SRC python :tangle automation.py     
     os.chdir(labs)
-    for i in range(31):
+    for i in range(1):
         if not os.path.isdir("labs[i]"):
             os.system("git clone %s" % data[i]["Github_Url"])            
 #+END_SRC
@@ -103,7 +103,7 @@ with open('labs.json') as data_file:
 
    - Copies build folder to "/var/www/html"
 #+BEGIN_SRC python :tangle automation.py
-                cmd2 = "sudo rsync -rav build/* " + "/var/www/html" + lab_id + "/"
+                cmd2 = "sudo rsync -rav build/* " + "/var/www/html/" + lab_id + "/"
                 #pprint (cmd2)
                 os.system(cmd2)
                 #  pprint (cmd)

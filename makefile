@@ -17,7 +17,7 @@ init:
 build: init
 	make -f tangle-make -k all
 	rsync -rav src/implementation/labs.json build/code/implementation
-	sudo rm -rf /var/www/*
+	sudo rm -rf /var/www/html/*
 
 clean:	
 	make -f tangle-make clean
